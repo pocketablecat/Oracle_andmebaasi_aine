@@ -1,0 +1,23 @@
+Selleks et teha comboboxi
+
+teed entity/view mis on ainult maakonnaga, siis terve tabeli entity/view object
+
+siis viewlink maakond = maakond, väiksemast tabelist suuremasse
+
+siis dragid jsp lehele ja valid NAVIGATION > ADF NAVIGATION LIST
+
+siis dragid kogu tabeli "DETAILS" lahtrisse ja paned adf read only table.
+
+
+
+_______________________________________________
+
+
+select jobs.job_title, jobs.min_salary, jobs.max_salary, job_history.department_id from jobs, job_history where job_history.start_date > '20-mar-98'
+
+
+select jobs.job_id, job_history.start_date, job_history.end_date from jobs, job_history where jobs.min_salary < (select avg(min_salary) from jobs);
+
+
+_____
+

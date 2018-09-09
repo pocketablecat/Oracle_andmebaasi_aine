@@ -1,0 +1,22 @@
+1) DESC c##hr.departments
+
+2) select department_id, department_name from c##hr.departments
+
+3) select distinct job_title, min_salary from C##HR.JOBS where min_salary < '5000'
+
+4) SELECT job_id, salary FROM C##HR.employees WHERE salary BETWEEN 2850 AND 9000;
+
+5) select department_id, department_name from C##HR.departments where department_id between 10 AND 60;
+
+6) select last_name, job_id, salary from C##HR.employees where (job_id='SH_CLERK' or job_id='SA_REP') and salary NOT IN (1000, 2600, 3000, 7000, 8000, 9000)
+
+7) select job_id, start_date from C##HR.job_history where job_id = 'IT_PROG'; //teistmoodi ül kuna enam pole olemas last-namesi
+
+8) select job_id, start_date, ROUND(MONTHS_BETWEEN(end_date, start_date)) from C##HR.job_history where job_id = 'IT_PROG'
+
+9) select employees.first_name, departments.department_id, departments.department_name from C##HR.EMPLOYEES, C##HR.DEPARTMENTS
+
+where employees.last_name IN ('Cambrault','Bates','King')  order by departments.department_id DESC; VÕI ASC
+
+10) select distinct job_id, location_id from C##HR.EMPLOYEES, C##HR.departments
+where c##hr.employees.department_id=c##hr.departments.department_id AND departments.department_id='30';

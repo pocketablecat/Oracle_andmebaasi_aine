@@ -1,0 +1,7 @@
+select employees.first_name, employees.last_name, employees.salary, job_history.start_date, job_history.end_date from employees, job_history 
+where employees.first_name LIKE 'N%'
+
+
+select employees.last_name, employees.email, employees.salary, 
+job_history.department_id  from employees, job_history where
+employees.salary > (select avg(employees.salary) from employees);
